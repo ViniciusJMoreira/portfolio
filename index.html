@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--============ CSS ============-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--============ ICONS BOOTSTRAP ============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+  <title>Portfolio Website</title>
+</head>
+<body>
+  <!--============ HEADER ============-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <img src="./assets/img/logo.svg" alt="" class="footer-logo-image">
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-close" id="nav-close">
+          <i class="bi bi-x-circle-fill"></i>
+        </div>
+      </div>
+      <div class="nav-social">
+        <button onclick="window.open()" class="nav-social-button"><i class="bi bi-facebook"></i></button>
+        <button onclick="window.open()" class="nav-social-button"><i class="bi bi-instagram"></i></button>
+        <button onclick="window.open()" class="nav-social-button"><i class="bi bi-twitter"></i></button>
+        <button onclick="window.open()" class="nav-social-button"><i class="bi bi-linkedin"></i></button>
+      </div>
+      <div class="nav-links">
+        <a href="#contact" class="nav-link-button button">Let's Talk</a>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="bi bi-list"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--============ MAIN ============-->
+    <main class="main">
+      <!--============ HOME ============-->
+      <section class="home grid" id="home">
+        <div class="home-container container grid">
+          <div class="home-content">
+            <span class="home-subtitle">Welcome To My World</span>
+            <h1 class="home-title">Hi, I'm Vinícius Moreira <span>JS Developer.</span> based in Italy.</h1>
+          </div>
+          <img src="assets/img/myphoto.png" alt="" class="home-img">
+        </div>
+      </section>
+      <!--============ ABOUT ============-->
+      <section class="about section" id="about">
+        <div class="about-container container grid">
+          <img src="assets/img/myphoto.png" alt="" class="about-img">
+          <div class="about-content">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-description">
+              There are many variations passage of Lorem impsum available, 
+              but the majority have suffered alteration in some form, by injected houmor, or randomised words which dont look even slightly believable. If you are going to use a passage Lorem Ipsum.
+            </p>
+            <div class="tabs-buttons">
+              <span class="tab-button tab-active" data-target="#skills">Main skils</span>
+              <span class="tab-button" data-target="#experience">Experience</span>
+              <span class="tab-button" data-target="#education">Education & Certification</span>
+            </div>
+            <div class="tabs-content">
+              <div class="tabs-item tab-active" data-content id="skills">
+                <div class="tabs-data grid">
+                  <p class="tabs-description">
+                    <span>User experience design</span> - UI/UX
+                    <span>Delight the user and make it work.</span>
+                  </p>
+                  <p class="tabs-description">
+                    <span>Web and user interface design</span> - Development
+                    <span>Websites, web experiences, ...</span>
+                  </p>
+                  <p class="tabs-description">
+                    <span>Interaction design</span> - Animation
+                    <span>I like to move it move it.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-content">
+              <div class="tabs-item" data-content id="experience">
+                <div class="tabs-data grid">
+                  <p class="tabs-description">
+                    <span>Front-end Engineer</span> - Google
+                    <span>2018 - Current</span>
+                  </p>
+                  <p class="tabs-description">
+                    <span>Front-end Engineer</span> - Microsoft
+                    <span>2017 - 2018</span>
+                  </p>
+                  <p class="tabs-description">
+                    <span>Software Engineer</span> - Alibalba
+                    <span>2016 - 2018</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-content">
+              <div class="tabs-item" data-content id="education">
+                <div class="tabs-data grid">
+                  <p class="tabs-description">
+                    <span>BSc In CSE</span> - ABC Institute, Los Angeles, CA
+                    <span>2009</span>
+                  </p>
+                  <p class="tabs-description">
+                    <span>Diploma in Computer Science</span> - Gamma Technical Institute
+                    <span>2009</span>
+                  </p>
+                  <p class="tabs-description">
+                    <span>Graphic Designer</span> - ABC Institute, Los Angeles, CA
+                    <span>2007</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--============ SERVICES ============-->
+      <section class="services section" id="services">
+        <div class="services-container container grid">
+          <h2 class="section-title">My Awesome Service</h2>
+          <p class="section-description">
+            They are many variations of passages of lorem ipsum available, but the majority have suffered alteration.
+          </p>
+          <div class="services-item">
+            <i class="bi bi-rss services-icon"></i>
+            <h3 class="services-title">Business Strategy</h3>
+            <p class="services-description">I throw my self down among the tall grass by the stream as I lie close to the earth.</p>
+          </div>
+          <div class="services-container">
+            <div class="services-item">
+              <i class="bi bi-person-video services-icon"></i>
+              <h3 class="services-title">Website Development</h3>
+              <p class="services-description">I throw my self down among the tall grass by the stream as I lie close to the earth.</p>
+            </div>
+          </div>
+          <div class="services-container">
+            <div class="services-item">
+              <i class="bi bi-person-vcard-fill services-icon"></i>
+              <h3 class="services-title">Marketing & Reporting</h3>
+              <p class="services-description">I throw my self down among the tall grass by the stream as I lie close to the earth.</p>
+            </div>
+          </div>
+          <div class="services-container">
+            <div class="services-item">
+              <i class="bi bi-display services-icon"></i>
+              <h3 class="services-title">Mobile Development</h3>
+              <p class="services-description">I throw my self down among the tall grass by the stream as I lie close to the earth.</p>
+            </div>
+          </div>
+          <div class="services-container">
+            <div class="services-item">
+              <i class="bi bi-person-vcard-fill services-icon"></i>
+              <h3 class="services-title">Marketing & Reporting</h3>
+              <p class="services-description">I throw my self down among the tall grass by the stream as I lie close to the earth.</p>
+            </div>
+          </div>
+          <div class="services-container">
+            <div class="services-item">
+              <i class="bi bi-display services-icon"></i>
+              <h3 class="services-title">Mobile Development</h3>
+              <p class="services-description">I throw my self down among the tall grass by the stream as I lie close to the earth.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--============ PORTFOLIO ============-->
+      <section class="portfolio section" id="portfolio">
+        <div class="portfolio-container container grid">
+          <h2 class="section-title">My Latest Project</h2>
+          <p class="section-description">
+            They are many variations of passages of lorem ipsum available, but the majority have suffered alteration.
+          </p>
+          <div class="portfolio-item">
+            <img src="./assets/img/portfolio-1.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Development</p>
+              <h3 class="portfolio-title">Web Design</h3>
+              <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="./assets/img/portfolio-2.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Product Design</p>
+              <h3 class="portfolio-title">App Development</h3>
+              <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="./assets/img/portfolio-3.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Application</p>
+              <h3 class="portfolio-title">Photoshop Design</h3>
+              <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="./assets/img/portfolio-4.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Web Design</p>
+              <h3 class="portfolio-title">Website Design</h3>
+              <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="./assets/img/portfolio-5.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Application</p>
+              <h3 class="portfolio-title">Web Application</h3>
+              <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="./assets/img/portfolio-6.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Photoshop</p>
+              <h3 class="portfolio-title">Photo Editing</h3>
+              <p class="portfolio-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--============ CONTACT ============-->
+      <section class="contact section" id="contact">
+        <div class="contact-container container grid">
+          <div class="contact-content">
+            <h2 class="section-title">Hire Me</h2>
+            <p class="contact-description">
+              I am available for freelancer work. Connect with me via phone:
+              <a href="tel:+393398208642">+393398208642</a> or email: <a href="mailto:viniciusit.moreira@gmail.com">viniciusit.moreira@gmail.com</a>
+            </p>
+            <form class="contact-form" id="contact-form">
+              <div class="contact-form-input">
+                <input
+                  type="text" 
+                  name="name" 
+                  placeholder="Your Name*" 
+                  class="contact-input" 
+                  id="contact-name">
+              </div>
+              <div class="contact-form-input">
+                <input
+                  type="email" 
+                  name="email" 
+                  placeholder="Your Mail*" 
+                  class="contact-input" 
+                  id="contact-email">
+              </div>
+              <div class="contact-form-input">
+                <input
+                  type="text" 
+                  name="subject" 
+                  placeholder="Write a Subject" 
+                  class="contact-input" 
+                  id="contact-subject">
+              </div>
+              <div class="contact-form-input">
+                <textarea name="message" id="contact-message" class="contact-input textarea" placeholder="Your Message"></textarea>
+              </div>
+              <input type="submit" value="submit" class="button">
+
+              <p class="error-message" id="error-message"></p>
+            </form>
+          </div>
+          <img src="./assets/img/myphoto.png" alt="" class="contact-image">
+        </div>
+      </section>
+    </main>
+  <!--============ FOOTER ============-->
+  <footer class="footer">
+    <div class="footer-container container grid">
+      <img src="./assets/img/logo.svg" alt="" class="footer-logo-image">
+      <div class="footer-social">
+        <button onclick="window.open()" class="footer-social-button"><i class="bi bi-facebook"></i></button>
+        <button onclick="window.open()" class="footer-social-button"><i class="bi bi-instagram"></i></button>
+        <button onclick="window.open()" class="footer-social-button"><i class="bi bi-twitter"></i></button>
+        <button onclick="window.open()" class="footer-social-button"><i class="bi bi-linkedin"></i></button>
+      </div>
+      <p class="footer-copy">&copy; 2023. All rights reserved.</p>
+    </div>
+  </footer>
+  <!--============ SCROLL UP ============-->
+  <a href="#home" class="scrollup" id="scroll-up">
+    <i class="bi bi-caret-up-fill scrollup-icon"></i>
+  </a>
+  <!--============ EMAIL-JS ============-->
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <!--============ SCRIPT MAIN-JS ============-->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
