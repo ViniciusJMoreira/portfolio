@@ -7,7 +7,7 @@
 
   /*============== Colors ==============*/
   /*Color mode HSL (Hue, Saturation, Lightness)*/
-  --first-color: hsl(350, 98%, 64%);
+  --first-color: #5e3fe7;  /*hsl(350, 98%, 64%) #5e3fe7*/
   --title-color: hsl(0, 0%, 100%);
   --text-color: hsl(0, 0%, 77%);
   --body-color: hsl(0, 0%, 6%);
@@ -19,7 +19,7 @@
   --body-font: 'Poppins', sans-serif;
   --second-font: 'Montserrat', sans-serif;
 
-  --big-font-size: clamp(2rem, 0.9706rem + 4.7059vw, 4.5rem);
+  --big-font-size: clamp(2rem, 0.9706rem + 4.7059vw, 4.1rem);
   --h1-font-size: clamp(1.75rem, 0.9265rem + 3.7647vw, 3.75rem);
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.5rem;
@@ -239,7 +239,7 @@ button {
 }
 .home-container {
   grid-template-columns: 7fr 5fr;
-  align-items: end;
+  align-items: center;
 }
 .home-subtitle {
   font-size: var(--small-font-size);
@@ -257,6 +257,10 @@ button {
   color: var(--first-color);
 }
 .home-img {
+  background-image: url('../img/myphoto.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
   width: 420px;
   height: 420px;
   border-radius: 50%;
@@ -309,6 +313,23 @@ button {
 }
 .tabs-description span:last-child {
   display: block;
+}
+.tabs-data-content {
+  grid-template-columns: repeat(3, 1fr);
+}
+.tabs-data-image {
+  cursor: pointer;
+  width: 150px;
+}
+.tabs-image {
+  width: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: all 1s var(--transition);
+  border: 2px solid transparent;
+}
+.tabs-image:hover {
+  box-shadow: 0 0 1px 2px var(--border-color);
 }
 
 /*Active Tab*/
@@ -375,6 +396,7 @@ button {
 }
 .portfolio-image {
   width: 100%;
+  object-fit: contain;
   vertical-align: middle;
   transition: all 1s var(--transition);
 }
@@ -476,7 +498,7 @@ button {
 }
 .footer-social-button {
   color: var(--text-color);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   transition: all 0.3s var(--transition);
 }
 .footer-social-button:hover {
@@ -637,6 +659,9 @@ button {
     flex-wrap: wrap;
     row-gap: 0.75rem;
     column-gap: 1.5rem;
+  }
+  .tabs-data-content {
+    grid-template-columns: repeat(2, 1fr);
   }
   .services-container,
   .portfolio-container,
