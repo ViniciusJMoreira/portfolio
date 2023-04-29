@@ -662,6 +662,7 @@ button {
   }
   .tabs-data-content {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 2.5rem;
   }
   .services-container,
   .portfolio-container,
