@@ -257,7 +257,7 @@ button {
   color: var(--first-color);
 }
 .home-img {
-  background-image: url('../img/myphoto.png');
+  background-image: url('../img/photobg.jpeg');
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
