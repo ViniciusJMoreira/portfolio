@@ -7,10 +7,10 @@
 
   /*============== Colors ==============*/
   /*Color mode HSL (Hue, Saturation, Lightness)*/
-  --first-color: #5e3fe7;  /*hsl(350, 98%, 64%) #5e3fe7*/
+  --first-color: #949494;  /*hsl(350, 98%, 64%) #5e3fe7*/
   --title-color: hsl(0, 0%, 100%);
   --text-color: hsl(0, 0%, 77%);
-  --body-color: hsl(0, 0%, 6%);
+  --body-color: hsl(0, 0%, 6%); 
   --container-color: hsl(0, 0%, 10%);
   --border-color: hsla(0, 0%, 100%, .2);
 
@@ -257,14 +257,14 @@ button {
   color: var(--first-color);
 }
 .home-img {
-  background-image: url('../img/photobg.jpeg');
+  background-image: url('../img/IMG_1710.PNG');
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  border: 0.75rem solid var(--container-color);
+  box-shadow: 0 0 15px 5px var(--first-color);
   margin-left: auto;
 }
 
