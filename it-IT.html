@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--============ CSS ============-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!--============ ICONS BOOTSTRAP ============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+  <title>Portfolio Website</title>
+</head>
+<body>
+  <!--============ HEADER ============-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <img src="./assets/img/logo.svg" alt="" class="footer-logo-image">
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active-link">Home</a></li>
+          <li><a href="#about" class="nav-link">Chi Sono</a></li>
+          <li><a href="#services" class="nav-link">Servizi</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contatti</a></li>
+        </ul>
+        <div class="nav-close" id="nav-close">
+          <i class="bi bi-x-circle-fill"></i>
+        </div>
+      </div>
+      <div class="nav-social">
+        <button onclick="window.open()" class="nav-social-button"><i class="bi bi-facebook"></i></button>
+        <button onclick="window.open()" class="nav-social-button"><i class="bi bi-instagram"></i></button>
+        <button onclick="window.open()" class="nav-social-button"><i class="bi bi-twitter"></i></button>
+        <button onclick="window.open()" class="nav-social-button"><i class="bi bi-linkedin"></i></button>
+      </div>
+      <div class="nav-links">
+        <a href="#contact" class="nav-link-button button">Contattami</a>
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="bi bi-list"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--============ MAIN ============-->
+    <main class="main">
+      <!--============ HOME ============-->
+      <section class="home grid" id="home">
+        <div class="home-container container grid">
+          <div class="home-content">
+            <span class="home-subtitle">Welcome To My World</span>
+            <h1 class="home-title">Ciao, Sono <br> Vinícius Moreira <span>Freelance JS Junior.</span></h1>
+          </div>
+          <div class="home-img"></div>
+        </div>
+      </section>
+      <!--============ ABOUT ============-->
+      <section class="about section" id="about">
+        <div class="about-container container grid">
+          <img src="assets/img/about-img.jpg" alt="" class="about-img">
+          <div class="about-content">
+            <h2 class="section-title">Dietro Le Quinte</h2>
+            <p class="about-description">
+              Sono un appassionato sviluppatore front-end freelancer con esperienza nella creazione di siti web responsive e dinamici. Sono in grado di lavorare in modo indipendente o come parte di un team, con una forte attenzione ai dettagli e alla qualità del codice. Sono entusiasta di collaborare a nuovi progetti e di aiutarti a trasformare la tua visione digitale in realtà!
+            </p>
+            <div class="tabs-buttons">
+              <span class="tab-button tab-active" data-target="#skills">Tecnologie</span>
+              <span class="tab-button" data-target="#experience">Experience</span>
+              <span class="tab-button" data-target="#education">Education & Certification</span>
+            </div>
+            <div class="tabs-content">
+              <div class="tabs-item tab-active" data-content id="skills">
+                <div class="tabs-data grid">
+                  <p class="tabs-description">
+                    <span>Linguaggi Di Programmazione</span> <mark>-</mark>
+                    <span>Javascript <mark>|</mark> Typescript</span>
+                  </p>
+                  <p class="tabs-description">
+                    <span>Preprocessore CSS</span> <mark>-</mark>
+                    <span>Sass</span>
+                  </p>
+                  <p class="tabs-description">
+                    <span>Librerie</span> <mark>-</mark>
+                    <span>JQuery <mark>|</mark> Bootstrap</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-content">
+              <div class="tabs-item" data-content id="experience">
+                <div class="tabs-data grid">
+                  <p class="tabs-description">
+                    <span></span> - 
+                    <span></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-content">
+              <div class="tabs-item" data-content id="education">
+                <div class="tabs-data-content">
+                  <div class="tabs-data-image">
+                    <img src="assets/img/certificato-html.jpg" alt="" class="tabs-image">
+                  </div>
+                  <div class="tabs-data-image">
+                    <img src="assets/img/certificato-css.jpg" alt="" class="tabs-image">
+                  </div>
+                  <div class="tabs-data-image">
+                    <img src="assets/img/certificato-base-js.jpg" alt="" class="tabs-image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--============ SERVICES ============-->
+      <section class="services section" id="services">
+        <h2 class="section-title">Servizi su Richiesta</h2>
+        <div class="services-container container grid">
+          <div class="services-item">
+            <img src="./assets/icon/reponsive-icon.svg" alt="Responsive Icon">
+            <h3 class="services-title">Siti Web Responsive</h3>
+            <p class="services-description">Realizzo siti web responsive che si adattano perfettamente a qualsiasi dispositivo, dai desktop agli smartphone.</p>
+          </div>
+            <div class="services-item">
+              <img src="./assets/icon/ui-icon.svg" alt="User Interface Icon">
+              <h3 class="services-title">Interfaccia Utente</h3>
+              <p class="services-description">Trasformo design in interfacce utente interattive e funzionali. Con un'attenzione particolare ai dettagli, intuitive e accessibili.</p>
+            </div>
+            <div class="services-item">
+              <img src="./assets/icon/appweb-icon.svg" alt="Application Web Icon">
+              <h3 class="services-title">Applicazioni Web</h3>
+              <p class="services-description">Costruisco applicazioni web dinamiche e interattive. Posso sviluppare semplici strumenti web o funzionalità interattive su siti web esistenti, sempre con un focus su performance e usabilità.</p>
+            </div>
+            <div class="services-item">
+              <img src="./assets/icon/api-icon.svg" alt="Application Programming Interface Icon">
+              <h3 class="services-title">Integrazione con API</h3>
+              <p class="services-description">Integro il tuo sito o applicazione con API esterne, permettendo agli utenti di accedere a dati e servizi di terze parti. Utilizzando la mia esperienza in JavaScript e TypeScript, aggiungo funzionalità avanzate per ampliare le capacità del tuo progetto e migliorare l'interazione utente.</p>
+            </div>
+            <div class="services-item">
+              <img src="./assets/icon/performance-icon.svg" alt="Performance Icon">
+              <h3 class="services-title">Ottimizzazione delle Performance</h3>
+              <p class="services-description">Ottimizzo le performance dei siti web esistenti, migliorando il tempo di caricamento e la reattività. Adotto le migliori pratiche per assicurare un'esperienza utente fluida e un buon posizionamento sui motori di ricerca.</p>
+            </div>
+            <div class="services-item">
+              <img src="./assets/icon/maintenance-icon.svg" alt="Maintenance Icon">
+              <h3 class="services-title">Correzione e Manutenzione</h3>
+              <p class="services-description">Offro servizi di manutenzione continua per garantire che il tuo sito sia sempre aggiornato e privo di bug. Risolvo problemi di compatibilità, regolo gli stili o aggiungo nuove funzionalità per assicurare che il tuo sito funzioni senza problemi.</p>
+            </div>
+        </div>
+      </section>
+      <!--============ PORTFOLIO ============-->
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section-title">Progetti Recenti</h2>
+        <p class="section-description">
+          In questa sezione, troverai una selezione dei miei progetti più recenti, che dimostrano la mia esperienza e le mie competenze nello sviluppo.
+        </p>
+        <div class="portfolio-container container grid">
+          <div class="portfolio-item" onclick="window.open('https://viniciusjmoreira.github.io/chain-app/index.html', '_blank')">
+            <img src="./assets/img/chain-app.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Templatemo.com</p>
+              <h3 class="portfolio-title">Chain App</h3>
+              <p class="portfolio-description"></p>
+            </div>
+          </div>
+          <div class="portfolio-item" onclick="window.open('https://viniciusjmoreira.github.io/anime-website/index.html', '_blank')">
+            <img src="./assets/img/desktop-anime-website.png" alt="" class="portfolio-image anime-Website">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Anime</p>
+              <h3 class="portfolio-title">Anime Website</h3>
+              <p class="portfolio-description"></p>
+            </div>
+          </div>
+          <div class="portfolio-item" onclick="window.open('https://viniciusjmoreira.github.io/bankist/index.html', '_blank')">
+            <img src="./assets/img/bankist.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">Udemy</p>
+              <h3 class="portfolio-title">Bankist Website</h3>
+              <p class="portfolio-description"></p>
+            </div>
+          </div>
+          <div class="portfolio-item" onclick="window.open('https://viniciusjmoreira.github.io/spacex-onebitcode/human-flight.html', `_blank`)">
+            <img src="./assets/img/desktop-spacexhs.png" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">OneBitCode</p>
+              <h3 class="portfolio-title">Simulation of SpaceX</h3>
+              <p class="portfolio-description"></p>
+            </div>
+          </div>
+          <div class="portfolio-item" onclick="window.open('https://viniciusjmoreira.github.io/foodio-restaurant/index.html', `_blank`)">
+            <img src="./assets/img/foodio-restaurant.jpg" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">CoderBite</p>
+              <h3 class="portfolio-title">Foodio Restaurant</h3>
+              <p class="portfolio-description"></p>
+            </div>
+          </div>
+          <div class="portfolio-item" onclick=" window.open('https://viniciusjmoreira.github.io/form-onebitx/index.html', '_blank')">
+            <img src="./assets/img/desktop-onebitx.png" alt="" class="portfolio-image">
+            <div class="portfolio-data">
+              <p class="portfolio-subtitle">OneBitCode</p>
+              <h3 class="portfolio-title">Basic Form</h3>
+              <p class="portfolio-description"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--============ CONTACT ============-->
+      <section class="contact section" id="contact">
+        <div class="contact-container container grid">
+          <div class="contact-content">
+            <h2 class="section-title">Lavoriamo Insieme</h2>
+            <p class="contact-description">Sono disponibile per lavori freelance. Contattami via
+            <a href="mailto:viniciusit.moreira@gmail.com">
+              email
+            </a>
+            </p>
+            <form class="contact-form" id="contact-form">
+              <div class="contact-form-input">
+                <input
+                  type="text" 
+                  name="name" 
+                  placeholder="Il tuo nome*" 
+                  class="contact-input" 
+                  id="contact-name">
+              </div>
+              <div class="contact-form-input">
+                <input
+                  type="email" 
+                  name="email" 
+                  placeholder="Il tuo email*" 
+                  class="contact-input" 
+                  id="contact-email">
+              </div>
+              <div class="contact-form-input">
+                <input
+                  type="text" 
+                  name="subject" 
+                  placeholder="Aggiungi un oggetto" 
+                  class="contact-input" 
+                  id="contact-subject">
+              </div>
+              <div class="contact-form-input">
+                <textarea name="message" id="contact-message" class="contact-input textarea" placeholder="Il tuo messaggio"></textarea>
+              </div>
+              <input type="submit" value="invia" class="button">
+
+              <p class="error-message" id="error-message"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  <!--============ FOOTER ============-->
+  <footer class="footer">
+    <div class="footer-container container grid">
+      <img src="./assets/img/logo.svg" alt="" class="footer-logo-image">
+      <div class="footer-social">
+        <button onclick="window.open()" class="footer-social-button"><i class="bi bi-facebook"></i></button>
+        <button onclick="window.open()" class="footer-social-button"><i class="bi bi-instagram"></i></button>
+        <button onclick="window.open()" class="footer-social-button"><i class="bi bi-twitter"></i></button>
+        <button onclick="window.open()" class="footer-social-button"><i class="bi bi-linkedin"></i></button>
+      </div>
+      <p class="footer-copy"><span class="first-color">&copy;</span> 2023.ll rights reserved.</p>
+    </div>
+  </footer>
+  <!--============ SCROLL UP ============-->
+  <a href="#home" class="scrollup" id="scroll-up">
+    <i class="bi bi-caret-up-fill scrollup-icon"></i>
+  </a>
+  <!--============ EMAIL-JS ============-->
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <!--============ SCRIPT MAIN-JS ============-->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
