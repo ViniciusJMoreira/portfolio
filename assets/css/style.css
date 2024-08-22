@@ -587,7 +587,7 @@ mark {
     display: none;
   }
   .home {
-    padding-top: 7rem;
+    padding-top: 6.5rem;
   }
   .home-container,
   .about-container {
@@ -694,9 +694,9 @@ mark {
   .nav {
     height: calc(var(--header-height) + .5rem);
   }
-  .home{
+  /* .home{
     padding-block: 5rem;
-  }
+  } */
   .home-img {
     width: 280px;
     height: 280px;
