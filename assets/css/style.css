@@ -19,8 +19,8 @@
   --body-font: 'Poppins', sans-serif;
   --second-font: 'Montserrat', sans-serif;
 
-  --big-font-size: clamp(2rem, 0.9706rem + 4.7059vw, 4.1rem);
-  --h1-font-size: clamp(1.75rem, 0.9265rem + 3.7647vw, 3.75rem);
+  --big-font-size: 4.1rem;
+  --h1-font-size: clamp(2.65rem, 0.9265rem + 3.7647vw, 3.75rem);
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.5rem;
   --normal-font-size: 1.125rem;
@@ -47,6 +47,11 @@
 }
 
 /*============== Responsive Typography ==============*/
+@media screen and (max-width: 1200px) {
+  :root {
+    --big-font-size: 3.9rem;
+  }
+}
 @media screen and (max-width: 992px) {
   :root {
     --header-height: 5rem;
@@ -55,6 +60,16 @@
     --normal-font-size: 1rem;
     --small-font-size: 0.9375rem;
     --smaller-font-size: 0.813rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 3.6rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  :root {
+    --big-font-size: clamp(2rem, 10.5vw, 3.6rem);
   }
 }
 
@@ -259,6 +274,7 @@ mark {
   font-size: var(--big-font-size);
   font-weight: var(--weight-900);
   text-transform: capitalize;
+  text-wrap: nowrap;
 }
 .home-title span {
   display: block;
@@ -678,6 +694,9 @@ mark {
   .nav {
     height: calc(var(--header-height) + .5rem);
   }
+  .home{
+    padding-block: 5rem;
+  }
   .home-img {
     width: 280px;
     height: 280px;
@@ -705,6 +724,12 @@ mark {
   .home-img {
     width: 260px;
     height: 260px;
+  }
+  .home-subtitle {
+    font-size: .8rem;
+  }
+  .section-title {
+    line-height: 1.4;
   }
   .services-item {
     padding: 2rem 1.5rem;
