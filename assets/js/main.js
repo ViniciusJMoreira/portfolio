@@ -163,23 +163,36 @@ footer.addEventListener("mouseup", function(e) {
 })
 
 /*=============== SECTION OBSERVER =============== */
-const sectionFrame = function(entries,observe) {
+const animationFrame = function(entries,observe) {
   const [entry] = entries;
   const currentSection = entry.target;
   if(!entry.isIntersecting) return;
-  currentSection.classList.remove("section-frame");
-  observe.unobserve(currentSection)
+  currentSection.classList.remove(this);
+  observe.unobserve(currentSection);
 }
 
+const sectionTopObserver = new IntersectionObserver(animationFrame.bind("section-frame"), {root:null, threshold: 0});
 const sectionAbout = document.querySelector(".about");
 const sectionServices = document.querySelector(".services");
 const sectionPortfolio = document.querySelector(".portfolio");
 const sectionContact = document.querySelector(".contact");
-const sectionTopObserver = new IntersectionObserver(sectionFrame, {root:null, threshold: 0});
 
 sectionTopObserver.observe(sectionAbout);
 sectionTopObserver.observe(sectionServices);
 sectionTopObserver.observe(sectionPortfolio);
 sectionTopObserver.observe(sectionContact);
 
-/*=============== CARD OBSERVER =============== */
+/*=============== MOBILE CARD OBSERVER =============== */
+const servicesCard = document.querySelectorAll(".services-item");
+const portfolioCard = document.querySelectorAll(".portfolio-item");
+const cardObserver = new IntersectionObserver(animationFrame.bind("card-frame"), {root:null, threshold: 0});
+if(document.documentElement.clientWidth <= 768) {
+  servicesCard.forEach(card => {
+    card.classList.add("card-frame");
+    cardObserver.observe(card);
+  });
+  portfolioCard.forEach((card) => {
+    card.classList.add("card-frame");
+    cardObserver.observe(card);
+  });
+}
