@@ -140,7 +140,7 @@ contactForm.addEventListener('submit', sendEmail)
 /*=============== EVENTS HOVER =============== */
 const nav = document.querySelector(".nav");
 const footer = document.querySelector(".footer-social");
-document.documentElement.style.cssText
+const scrollUp = document.querySelector(".scrollup");
 nav.addEventListener("mouseup", function(e) {
   const currentIcon = e.target.closest(".nav-social-button");
   const currentBtn = e.target.closest(".nav-link-button");
@@ -156,11 +156,17 @@ nav.addEventListener("mouseup", function(e) {
 })
 footer.addEventListener("mouseup", function(e) {
   const currentIcon = e.target.closest(".footer-social-button");
-  if(!currentIcon) return;
+  if (!currentIcon) return;
   currentIcon.style.cssText = `
-      color: var(--title-color);
+    color: var(--text-title);
   `;
 })
+
+scrollUp.addEventListener("mouseup", function () {
+  scrollUp.style.cssText = `
+    color: var(--first-color);
+  `;
+});
 
 /*=============== SECTION OBSERVER =============== */
 const animationFrame = function(entries,observe) {
@@ -186,13 +192,5 @@ sectionTopObserver.observe(sectionContact);
 const servicesCard = document.querySelectorAll(".services-item");
 const portfolioCard = document.querySelectorAll(".portfolio-item");
 const cardObserver = new IntersectionObserver(animationFrame.bind("card-frame"), {root:null, threshold: 0});
-if(document.documentElement.clientWidth <= 768) {
-  servicesCard.forEach(card => {
-    card.classList.add("card-frame");
-    cardObserver.observe(card);
-  });
-  portfolioCard.forEach((card) => {
-    card.classList.add("card-frame");
-    cardObserver.observe(card);
-  });
-}
+servicesCard.forEach((card) => cardObserver.observe(card));
+portfolioCard.forEach((card) => cardObserver.observe(card));

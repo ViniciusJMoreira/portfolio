@@ -177,10 +177,6 @@ mark {
   opacity: 0;
   transform: translateY(4rem);
 }
-.card-frame {
-  opacity: 0;
-  transform: translateX(-4rem);
-}
 
 /*============== HEADER ==============*/
 .header {
@@ -703,6 +699,10 @@ mark {
 @media screen and (max-width: 768px) {
   .container {
     max-width: 540px;
+  }
+  .card-frame {
+    opacity: 0;
+    transform: translateX(-4rem);
   }
   .nav {
     height: calc(var(--header-height) + .5rem);
