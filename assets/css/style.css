@@ -693,6 +693,9 @@ mark {
   .contact-description {
     margin-bottom: 2rem;
   }
+  .contact-form .button {
+    width: 100%;
+  }
   .footer-social-button {
     font-size: 1.2rem;
   }
