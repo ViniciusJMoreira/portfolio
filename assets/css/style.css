@@ -148,7 +148,6 @@ mark {
   font-size: var(--h1-font-size);
   margin-bottom: 1rem;
 }
-.section-title:not(.about .section-title, .contact .section-title),
 .section-description {
   text-align: center;
   margin-bottom: 3.75rem;
@@ -371,6 +370,9 @@ mark {
   display: block;
 }
 /*============== SERVICES ==============*/
+.services .section-title {
+  text-align: center;
+}
 .services-container {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -395,6 +397,9 @@ mark {
 .portfolio {
   background-color: var(--container-color);
   box-shadow: 0 0 10px 5px #22272e4f;
+}
+.portfolio .section-title {
+  text-align: center;
 }
 .portfolio-container {
   grid-template-columns: repeat(3, 1fr);
@@ -617,6 +622,9 @@ mark {
   }
 }
 @media screen and (max-width: 992px) {
+  .section {
+    padding-block: 6rem;
+  }
   .container {
     max-width: 720px;
   }
@@ -626,6 +634,9 @@ mark {
   }
   .nav-social {
     margin-left: auto;
+  }
+  .nav-social-button {
+    font-size: 1.10rem;
   }
   .nav-close,
   .nav-toggle {
