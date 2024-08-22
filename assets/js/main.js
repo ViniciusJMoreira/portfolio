@@ -136,3 +136,48 @@ const sendEmail = (e) => {
 }
 
 contactForm.addEventListener('submit', sendEmail)
+
+/*=============== EVENTS HOVER =============== */
+const nav = document.querySelector(".nav");
+const footer = document.querySelector(".footer-social");
+document.documentElement.style.cssText
+nav.addEventListener("mouseup", function(e) {
+  const currentIcon = e.target.closest(".nav-social-button");
+  const currentBtn = e.target.closest(".nav-link-button");
+  if (currentIcon)
+    currentIcon.style.cssText = `
+      color: var(--title-color);
+      transform: translateY(0rem);
+    `;
+  if (currentBtn)
+    currentBtn.style.cssText = `
+      background-color: transparent;
+    `;
+})
+footer.addEventListener("mouseup", function(e) {
+  const currentIcon = e.target.closest(".footer-social-button");
+  if(!currentIcon) return;
+  currentIcon.style.cssText = `
+      color: var(--title-color);
+  `;
+})
+
+/*=============== SECTION OBSERVER =============== */
+const sectionFrame = function(entries,observe) {
+  const [entry] = entries;
+  const currentSection = entry.target;
+  if(!entry.isIntersecting) return;
+  currentSection.classList.remove("section-frame");
+  observe.unobserve(currentSection)
+}
+
+const sectionAbout = document.querySelector(".about");
+const sectionServices = document.querySelector(".services");
+const sectionPortfolio = document.querySelector(".portfolio");
+const sectionContact = document.querySelector(".contact");
+const sectionTopObserver = new IntersectionObserver(sectionFrame, {root:null, threshold: 0});
+
+sectionTopObserver.observe(sectionAbout);
+sectionTopObserver.observe(sectionServices);
+sectionTopObserver.observe(sectionPortfolio);
+sectionTopObserver.observe(sectionContact);
