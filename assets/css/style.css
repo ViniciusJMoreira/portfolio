@@ -738,8 +738,11 @@ mark {
   .home-subtitle {
     font-size: .8rem;
   }
-  .section-title {
+  /* .section-title {
     line-height: 1.4;
+  } */
+  .portfolio .section-title span {
+    display: none;
   }
   .services-item {
     padding: 2rem 1.5rem;
