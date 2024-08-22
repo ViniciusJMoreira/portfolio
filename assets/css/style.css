@@ -530,7 +530,7 @@ mark {
 }
 .footer-social-button {
   color: var(--text-color);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   transition: all 0.3s var(--transition);
 }
 .footer-social-button:hover {
