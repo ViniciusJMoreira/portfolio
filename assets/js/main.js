@@ -181,3 +181,5 @@ sectionTopObserver.observe(sectionAbout);
 sectionTopObserver.observe(sectionServices);
 sectionTopObserver.observe(sectionPortfolio);
 sectionTopObserver.observe(sectionContact);
+
+/*=============== CARD OBSERVER =============== */
