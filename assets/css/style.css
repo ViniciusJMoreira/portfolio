@@ -300,7 +300,6 @@ mark {
   align-items: center;
 }
 .about-img {
-  height: 100%;
   border-radius: var(--radius);
   box-shadow: 0 0 10px 5px #1d2127;
   object-fit: cover;
@@ -694,9 +693,6 @@ mark {
   .nav {
     height: calc(var(--header-height) + .5rem);
   }
-  /* .home{
-    padding-block: 5rem;
-  } */
   .home-img {
     width: 280px;
     height: 280px;
