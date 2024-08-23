@@ -140,8 +140,8 @@ contactForm.addEventListener('submit', sendEmail)
 /*=============== EVENTS HOVER =============== */
 const nav = document.querySelector(".nav");
 const footer = document.querySelector(".footer-social");
-const scrollUp = document.querySelector(".scrollup");
-nav.addEventListener("mouseup", function(e) {
+const scrollUpIcon = document.querySelector(".scrollup-icon");
+nav.addEventListener("mousedown", function (e) {
   const currentIcon = e.target.closest(".nav-social-button");
   const currentBtn = e.target.closest(".nav-link-button");
   if (currentIcon)
@@ -153,17 +153,17 @@ nav.addEventListener("mouseup", function(e) {
     currentBtn.style.cssText = `
       background-color: transparent;
     `;
-})
-footer.addEventListener("mouseup", function(e) {
+});
+footer.addEventListener("mousedown", function (e) {
   const currentIcon = e.target.closest(".footer-social-button");
   if (!currentIcon) return;
   currentIcon.style.cssText = `
     color: var(--text-title);
   `;
-})
+});
 
-scrollUp.addEventListener("mouseup", function () {
-  scrollUp.style.cssText = `
+scrollUpIcon.addEventListener("mousedown", function () {
+  this.style.cssText = `
     color: var(--first-color);
   `;
 });
