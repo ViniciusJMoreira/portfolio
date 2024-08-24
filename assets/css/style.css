@@ -166,10 +166,6 @@ mark {
   cursor: pointer;
   transition: all 0.3s var(--transition);
 }
-.button:hover {
-  background-color: transparent;
-  color: var(--first-color);
-}
 .first-color {
   color: var(--first-color);
 }
@@ -213,18 +209,11 @@ mark {
   column-gap: 1.5rem;
   margin-left: auto;
 }
-.nav-social-button:hover {
-  color: var(--first-color);
-  transform: translateY(-0.25rem);
-}
 .nav-link-button {
   font-size: var(--smaller-font-size);
   background-color: transparent;
   border-color: var(--first-color);
   padding: 0.625rem 1.25rem;
-}
-.nav-link-button:hover {
-  background-color: var(--first-color);
   color: var(--title-color);
 }
 .nav-toggle,
@@ -541,9 +530,6 @@ mark {
   font-size: 1.3rem;
   transition: all 0.3s var(--transition);
 }
-.footer-social-button:hover {
-  color: var(--first-color);
-}
 .footer-copy {
   font-size: var(--small-font-size);
   font-weight: var(--weight-400);
@@ -563,9 +549,6 @@ mark {
   font-size: 1.5rem;
   color: var(--first-color);
   transition:all 0.4s var(--transition);
-}
-.scrollup-icon:hover {
-  color: var(--text-color);
 }
 .show-scroll {
   display: block;
