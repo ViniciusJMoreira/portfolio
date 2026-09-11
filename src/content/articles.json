@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "articolo-di-prova",
+    "author": "Vinícius Junqueira Moreira",
+    "date": "2026-09-11",
+    "title": "Articolo di prova — solo per vedere il componente",
+    "description": "Contenuto segnaposto, serve solo a mostrare come appare la pagina di un singolo articolo (layout, tipografia, data). Da rimuovere o sostituire con un articolo vero.",
+    "content": "Questo è un **articolo di prova**, non un contenuto reale. Serve solo per vedere come si comporta il componente `ArticleLayout`: titolo, data, tipografia del testo (`Prose`), e il bottone \"torna indietro\".\n\nQuando scriverai il primo articolo vero, questa voce va rimossa o sostituita.\n\n## Un titolo di esempio\n\nUn paragrafo qualsiasi per vedere come si comporta la tipografia — grassetto, *corsivo*, e un [link di esempio](/about).\n\n- Punto elenco uno\n- Punto elenco due\n\n```js\n// blocco di codice di esempio\nfunction ciao() {\n  console.log('funziona')\n}\n```\n"
+  }
+]
