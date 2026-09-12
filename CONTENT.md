@@ -16,20 +16,18 @@ Note: nessun riferimento al percorso professionale (elettricista → dev) — qu
 
 **Stato: confermato**
 
-7 loghi, "i principali":
+6 loghi, "i principali":
 1. React
 2. Next.js
-3. JavaScript
-4. Tailwind CSS
-5. Supabase
-6. Git / GitHub
-7. Claude
+3. Tailwind CSS
+4. Supabase
+5. Git / GitHub
+6. Claude
 
-Nota: v0.dev escluso dalla home per non affollare la fascia (7 loghi max) — resta nella lista completa di `/about`.
+Nota: JavaScript rimosso deliberatamente dalla home (ridondante con React/Next.js). v0.dev escluso dalla home per non affollare la fascia — resta nella lista completa di `/about`.
 
 **Comportamento (nota tecnica per il componente)**:
-- Desktop/spazio sufficiente: riga statica, nessuna animazione (7 loghi ci stanno tutti)
-- Mobile/spazio insufficiente: marquee automatico continuo, velocità lenta e leggera (loop infinito, non a scatti/step)
+- Marquee automatico continuo su tutti i breakpoint, desktop incluso — non più solo mobile. Velocità lenta e leggera (loop infinito, non a scatti/step).
 
 ## Home — preview articoli
 

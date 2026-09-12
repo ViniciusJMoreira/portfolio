@@ -5,6 +5,7 @@ import rehypePrism from '@mapbox/rehype-prism'
 
 import { ArticleLayout } from '@/components/ArticleLayout'
 import { getAllArticles, getArticleBySlug } from '@/lib/blog'
+import { siteUrl } from '@/lib/siteConfig'
 
 export async function generateStaticParams() {
   let articles = await getAllArticles()
@@ -23,6 +24,22 @@ export async function generateMetadata({ params }) {
   return {
     title: article.title,
     description: article.description,
+    alternates: {
+      canonical: `/blog/${article.slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      url: `/blog/${article.slug}`,
+      title: article.title,
+      description: article.description,
+      publishedTime: article.date,
+      authors: [article.author],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.description,
+    },
   }
 }
 
@@ -34,8 +51,26 @@ export default async function ArticlePage({ params }) {
     notFound()
   }
 
+  let articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.description,
+    datePublished: article.date,
+    author: {
+      '@type': 'Person',
+      name: article.author,
+    },
+    url: `${siteUrl}/blog/${article.slug}`,
+    mainEntityOfPage: `${siteUrl}/blog/${article.slug}`,
+  }
+
   return (
     <ArticleLayout article={article}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <MDXRemote
         source={article.content}
         options={{

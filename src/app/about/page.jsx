@@ -47,8 +47,9 @@ const skillGroups = [
     items: 'Supabase (Postgres, Auth, Storage)',
   },
   {
-    title: 'Sicurezza',
-    items: 'Supabase Auth / Row Level Security (RLS)',
+    title: 'Performance, Sicurezza & Testing',
+    items:
+      'Supabase Auth / Row Level Security (RLS), audit e ottimizzazione di performance, testing con Jest e React Testing Library, supportati da workflow AI con Claude Code',
   },
   {
     title: 'Strumenti',
@@ -60,7 +61,7 @@ const skillGroups = [
   },
   {
     title: 'In approfondimento',
-    items: 'TypeScript, Testing (Jest, React Testing Library)',
+    items: 'TypeScript',
   },
 ]
 
@@ -68,6 +69,9 @@ export const metadata = {
   title: 'About',
   description:
     'Sono Vinícius Junqueira Moreira. Vivo vicino a Rimini, dove trasformo problemi reali in interfacce che funzionano.',
+  alternates: {
+    canonical: '/about',
+  },
 }
 
 export default function About() {
@@ -78,7 +82,7 @@ export default function About() {
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
-              alt=""
+              alt="Ritratto di Vinícius Junqueira Moreira"
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />

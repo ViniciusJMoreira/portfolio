@@ -32,6 +32,9 @@ export const metadata = {
   title: 'Projects',
   description:
     "Progetti che ho costruito, dal percorso di apprendimento a problemi reali.",
+  alternates: {
+    canonical: '/projects',
+  },
 }
 
 export default function Projects() {

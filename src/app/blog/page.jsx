@@ -36,6 +36,9 @@ export const metadata = {
   title: 'Blog',
   description:
     "Condivido la mia esperienza di sviluppo front-end, React e Next.js, e di come uso l'AI nel workflow quotidiano.",
+  alternates: {
+    canonical: '/blog',
+  },
 }
 
 export default async function BlogIndex() {
@@ -44,7 +47,7 @@ export default async function BlogIndex() {
   return (
     <SimpleLayout
       title="Condivido la mia esperienza di sviluppo front-end, React e Next.js, e di come uso l'AI nel workflow quotidiano."
-      intro="Note, appunti ed esperienze dal mio percorso — codice, strumenti e qualche riflessione lungo la strada."
+      intro="Note, appunti ed esperienze dal mio percorso formativo."
     >
       {articles.length > 0 ? (
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
