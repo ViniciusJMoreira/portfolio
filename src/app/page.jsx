@@ -7,7 +7,6 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from '@/components/SocialIcons'
 import { StackLogos } from '@/components/StackLogos'
 import { getAllArticles } from '@/lib/blog'
@@ -125,14 +124,13 @@ export default async function Home() {
             <Button href="/about">Scopri di più su di me</Button>
           </div>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
-              href="#"
+              href="https://www.instagram.com/viniicius.dev"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="#"
+              href="https://github.com/ViniciusJMoreira"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />

@@ -39,29 +39,41 @@ function MailIcon(props) {
 const skillGroups = [
   {
     title: 'Frontend',
-    items:
-      'React (Hooks, Routing, State Management), Next.js, JavaScript (ES6+), Sass, Tailwind CSS',
+    items: [
+      'React (Hooks, Routing con React Router v6.4+, State Management con Context API, useReducer e Redux Toolkit)',
+      'Custom Hooks',
+      'Next.js (App Router, Server Components, Server Actions)',
+      'JavaScript (ES6+)',
+      'CSS Modules',
+      'Styled Components',
+      'Tailwind CSS',
+    ],
   },
   {
     title: 'Backend / Database',
-    items: 'Supabase (Postgres, Auth, Storage)',
+    items: ['Supabase (Postgres, Auth, Storage)'],
   },
   {
     title: 'Performance, Sicurezza & Testing',
-    items:
-      'Supabase Auth / Row Level Security (RLS), audit e ottimizzazione di performance, testing con Jest e React Testing Library, supportati da workflow AI con Claude Code',
+    items: [
+      'Supabase Auth / Row Level Security (RLS)',
+      'Ottimizzazione con memo, useMemo, useCallback e code splitting',
+      'Audit e ottimizzazione di performance',
+      'Testing con Jest e React Testing Library',
+      'Supportati da workflow AI con Claude Code',
+    ],
   },
   {
     title: 'Strumenti',
-    items: 'Git & GitHub, Vercel, Figma',
+    items: ['Git & GitHub', 'Vercel', 'Figma', 'Canva'],
   },
   {
     title: 'Workflow AI',
-    items: 'Claude Code (MCP), v0.dev, Google Stitch',
+    items: ['Claude Code (MCP)', 'v0.dev', 'Google Stitch'],
   },
   {
     title: 'In approfondimento',
-    items: 'TypeScript',
+    items: ['TypeScript', 'Node.js'],
   },
 ]
 
@@ -128,40 +140,35 @@ export default function About() {
               approccio e continuare a crescere come sviluppatore.
             </p>
           </div>
-
-          <div className="mt-12 space-y-6 border-t border-zinc-100 pt-10 dark:border-zinc-700/40">
+          <div className="space-y-6">
+            <p className="text-xs font-semibold tracking-widest text-teal-500 uppercase pt-6 mt-12 border-t border-zinc-100 dark:border-zinc-700/40 ">
+              Stack
+            </p>
             {skillGroups.map((group) => (
               <div key={group.title}>
                 <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                   {group.title}
                 </h2>
-                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                  {group.items}
-                </p>
+                <ul role="list" className="mt-1 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+                  {group.items.map((item) => (
+                    <li key={item}>
+                      <span className="text-teal-500">+</span> {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink
-              href="#"
-              icon={InstagramIcon}
-              className="mt-4"
-            >
+            <SocialLink href="https://www.instagram.com/viniicius.dev/" icon={InstagramIcon} className="mt-4">
               Follow on Instagram
             </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink href="https://github.com/ViniciusJMoreira" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
             </SocialLink>
-            <SocialLink
-              href="https://www.linkedin.com/in/vinicius-jmoreira"
-              icon={LinkedInIcon}
-              className="mt-4"
-            >
+            <SocialLink href="https://www.linkedin.com/in/vinicius-jmoreira" icon={LinkedInIcon} className="mt-4">
               Follow on LinkedIn
             </SocialLink>
             <SocialLink

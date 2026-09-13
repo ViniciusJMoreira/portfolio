@@ -3,6 +3,10 @@ import { Layout } from '@/components/Layout'
 import { siteDescription, siteName, siteUrl } from '@/lib/siteConfig'
 
 import '@/styles/tailwind.css'
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -41,7 +45,7 @@ let personJsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="it" className="h-full antialiased" suppressHydrationWarning>
+    <html lang="it" className={cn("h-full antialiased", "font-sans", geist.variable)} suppressHydrationWarning>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
         <script
           type="application/ld+json"
