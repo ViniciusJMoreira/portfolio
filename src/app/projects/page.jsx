@@ -1,19 +1,27 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import clsx from 'clsx'
 
-import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import movin1 from '@/images/projects/links-movin/movin-1.png'
+import movin2 from '@/images/projects/links-movin/movin-2.png'
+import movin3 from '@/images/projects/links-movin/movin-3.png'
+import movin4 from '@/images/projects/links-movin/movin-4.png'
 
-// Progetto di PROVA, solo per vedere il componente Card in azione.
+// Progetto di PROVA, solo per vedere la riga progetto in azione.
 // Da sostituire con i progetti reali (candidato certo: web app gestionale
 // + bot WhatsApp per COOP134) quando saranno pronti.
+// `imageMobile`: unica immagine mostrata sotto lg (mobile/tablet).
+// `images`: fino a 3 screenshot mostrati da lg in su (2 a lg, 3 a xl).
+// Finché restano null, i riquadri restano vuoti.
 const projects = [
   {
-    name: 'Progetto di prova',
+    name: 'Bio Creator',
     description:
-      'Contenuto segnaposto per vedere come appare una card progetto (logo, titolo, descrizione, link). Da sostituire con un progetto vero.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoPlanetaria,
+      'Pagina bio links per una content creator, con showcase prodotti in affiliazione, collegamenti ai social e una sezione per il recruiting di nuovi talenti.',
+    link: { href: 'https://movinbio.vercel.app', label: 'Live preview' },
+    imageMobile: movin1,
+    images: [movin2, movin3, movin4],
   },
 ]
 
@@ -48,29 +56,60 @@ export default function Projects() {
           Sto preparando i primi progetti da mostrare qui — torna presto.
         </p>
       ) : (
-      <ul
-        role="list"
-        className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-      >
+      <ul role="list" className="flex flex-col gap-y-16">
         {projects.map((project) => (
-          <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image
-                src={project.logo}
-                alt=""
-                className="h-8 w-8"
-                unoptimized
-              />
+          <li
+            key={project.name}
+            className="group grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-[minmax(220px,280px)_1fr] lg:grid-cols-[minmax(220px,280px)_repeat(2,1fr)] xl:grid-cols-[minmax(220px,280px)_repeat(3,1fr)]"
+          >
+            <div className="flex min-w-0 flex-col justify-center gap-3 px-4 sm:px-6 md:px-0">
+              <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                {project.name}
+              </h2>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                {project.description}
+              </p>
+              <Link
+                href={project.link.href}
+                className="inline-flex w-fit items-center text-sm font-medium text-zinc-400 transition hover:text-teal-500 dark:text-zinc-200"
+              >
+                <LinkIcon className="h-6 w-6 flex-none" />
+                <span className="ml-2">{project.link.label}</span>
+              </Link>
             </div>
-            <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href}>{project.name}</Card.Link>
-            </h2>
-            <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.link.label}</span>
-            </p>
-          </Card>
+
+            <div className="aspect-3/3 w-full min-w-0 overflow-hidden rounded-2xl bg-zinc-100 lg:hidden dark:bg-zinc-800">
+              {project.imageMobile && (
+                <Image
+                  src={project.imageMobile}
+                  alt=""
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                />
+              )}
+            </div>
+
+            {[0, 1, 2].map((slot) => (
+              <div
+                key={slot}
+                className={clsx(
+                  'aspect-3/3 w-full min-w-0 overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800',
+                  slot < 2 ? 'hidden lg:block' : 'hidden xl:block',
+                )}
+              >
+                {project.images?.[slot] && (
+                  <Image
+                    src={project.images[slot]}
+                    alt=""
+                    className={clsx(
+                      'h-full w-full object-cover transition duration-300 group-hover:scale-105',
+                      slot === 1 && 'delay-75',
+                      slot === 2 && 'delay-150',
+                    )}
+                  />
+                )}
+              </div>
+            ))}
+          </li>
         ))}
       </ul>
       )}
